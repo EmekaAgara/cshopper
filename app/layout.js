@@ -23,8 +23,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={urbanist.className}>
         {/* <Provider store={store}> */}
-        <Header />
-        <AppKitProvider initialState={initialState}>{children}</AppKitProvider>
+
+        <AppKitProvider initialState={initialState}>
+          <Header />
+          {children}
+        </AppKitProvider>
         {/* <Footer /> */}
         {/* </Provider> */}
       </body>
