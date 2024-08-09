@@ -4,8 +4,8 @@ import { headers } from "next/headers";
 import { cookieToInitialState } from "wagmi";
 import { config } from "@/config";
 import AppKitProvider from "@/context";
-import Header from "@/componennts/Header";
-import Footer from "@/componennts/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Provider } from "react-redux";
 import store from "@/store/store";
 
@@ -27,8 +27,8 @@ export default function RootLayout({ children }) {
         <AppKitProvider initialState={initialState}>
           <Header />
           {children}
+          <Footer />
         </AppKitProvider>
-        {/* <Footer /> */}
         {/* </Provider> */}
       </body>
     </html>
