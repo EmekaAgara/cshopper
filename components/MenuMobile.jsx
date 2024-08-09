@@ -49,7 +49,6 @@ const MenuMobile = ({
                           <li className="py-4 px-8 border-t flex justify-between">
                             {submenu.name}
                             <span className="opacity-50 text-sm">
-                              {/* {`(${c.products.data.length})`} */}
                               {`(${submenu.doc_count})`}
                             </span>
                           </li>
