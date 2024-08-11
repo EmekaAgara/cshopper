@@ -6,8 +6,6 @@ import { config } from "@/config";
 import AppKitProvider from "@/context";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Provider } from "react-redux";
-import store from "@/store/store";
 
 // const inter = Inter({ subsets: ["latin"] });
 const urbanist = Urbanist({ subsets: ["latin"] });
@@ -22,14 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={urbanist.className}>
-        {/* <Provider store={store}> */}
-
         <AppKitProvider initialState={initialState}>
           <Header />
           {children}
           <Footer />
         </AppKitProvider>
-        {/* </Provider> */}
       </body>
     </html>
   );

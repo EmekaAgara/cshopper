@@ -13,10 +13,26 @@ if (!projectId) throw new Error("Project ID is not defined");
 
 // Create modal
 createWeb3Modal({
+  // chains,
   metadata,
   wagmiConfig: config,
   projectId,
   enableAnalytics: true, // Optional - defaults to your Cloud configuration
+  auth: {
+    email: true, // default to true
+    socials: [
+      "google",
+      "x",
+      "github",
+      "discord",
+      "apple",
+      "facebook",
+      "farcaster",
+    ],
+    showWallets: true, // default to true
+    walletFeatures: true, // default to true
+    // enableOnramp: false, // Optional - true by default
+  },
 });
 
 export default function AppKitProvider({ children, initialState }) {
