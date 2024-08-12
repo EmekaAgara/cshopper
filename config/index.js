@@ -11,7 +11,7 @@ if (!projectId) throw new Error("Project ID is not defined");
 export const metadata = {
   name: "AppKit",
   description: "AppKit Example",
-  url: "https://web3modal.com", // origin must match your domain & subdomain
+  url: "http://localhost:3000/", // origin must match your domain & subdomain
   icons: ["https://avatars.githubusercontent.com/u/37784886"],
 };
 
@@ -25,4 +25,18 @@ export const config = defaultWagmiConfig({
   storage: createStorage({
     storage: cookieStorage,
   }),
+  auth: {
+    email: true, // default to true
+    socials: [
+      "google",
+      "x",
+      "github",
+      "discord",
+      "apple",
+      "facebook",
+      "farcaster",
+    ],
+    showWallets: true, // default to true
+    walletFeatures: true, // default to true
+  },
 });
