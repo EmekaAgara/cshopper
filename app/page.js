@@ -15,7 +15,8 @@ export default function Home() {
           <div className="text-md md:text-xl">
             What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
             printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown
+            industry&apos;s standard dummy text ever since the 1500s, when an
+            unknown
           </div>
         </div>
 
