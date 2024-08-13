@@ -5,6 +5,14 @@ import ProductDetailsCarousel from "@/components/ProductDetailsCarousel";
 import { IoMdHeartEmpty } from "react-icons/io";
 import RelatedProducts from "@/components/RelatedProducts";
 import ReactMarkdown from "react-markdown";
+import SendTransaction from "@/components/SendTransaction";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
+import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -18,6 +26,8 @@ export default function ProductDetails({ params }) {
   if (!product) {
     return <div>Product not found</div>;
   }
+
+  const [open, setOpen] = useState(true);
 
   return (
     <div className="w-full md:py-20">
@@ -52,11 +62,12 @@ export default function ProductDetails({ params }) {
               </>
             </div>
 
-            <div className="text-md font-medium text-black/[0.5]">
-              incl. of taxes
+            <div className="text-md cursor-pointer underline font-medium text-black/[0.5]">
+              Vendor: {product.vendorName}
             </div>
+
             <div className="text-md font-medium text-black/[0.5] mb-20">
-              {`(Also includes all applicable duties)`}
+              {`(incl. of taxes and Also includes all applicable duties)`}
             </div>
 
             <div className="mb-10">
@@ -141,6 +152,7 @@ export default function ProductDetails({ params }) {
               Whishlist
               <IoMdHeartEmpty size={20} />
             </button>
+            <SendTransaction key={product.id} data={product} />
 
             <div>
               <div className="text-lg font-bold mb-5">Product Details</div>
@@ -160,6 +172,8 @@ export default function ProductDetails({ params }) {
 
         <RelatedProducts products={products} />
       </Wrapper>
+
+      {/* Dialog */}
     </div>
   );
 }
