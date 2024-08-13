@@ -7,19 +7,6 @@ import RelatedProducts from "@/components/RelatedProducts";
 import ReactMarkdown from "react-markdown";
 import SendTransaction from "@/components/SendTransaction";
 
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-// import { Input } from "@/components/ui/input";
-// import { Label } from "@/components/ui/label";
-
 export async function generateStaticParams() {
   return products.map((product) => ({
     id: product.id,
@@ -148,15 +135,15 @@ export default function ProductDetails({ params }) {
               </div>
             </div>
 
-            <button className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75">
+            {/* <button className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75">
               Buy Now
-            </button>
+            </button> */}
 
+            <SendTransaction key={product.id} data={product} />
             <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10">
               Whishlist
               <IoMdHeartEmpty size={20} />
             </button>
-            <SendTransaction key={product.id} data={product} />
 
             <div>
               <div className="text-lg font-bold mb-5">Product Details</div>
@@ -175,45 +162,6 @@ export default function ProductDetails({ params }) {
         </div>
 
         <RelatedProducts products={products} />
-
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button variant="outline">Edit Profile</Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle>Edit profile</DialogTitle>
-              <DialogDescription>
-                Make changes to your profile here. Click save when you're done.
-              </DialogDescription>
-            </DialogHeader>
-            <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4">
-                {/* <Label htmlFor="name" className="text-right">
-                  Name
-                </Label>
-                <Input
-                  id="name"
-                  defaultValue="Pedro Duarte"
-                  className="col-span-3"
-                /> */}
-              </div>
-              <div className="grid grid-cols-4 items-center gap-4">
-                {/* <Label htmlFor="username" className="text-right">
-                  Username
-                </Label>
-                <Input
-                  id="username"
-                  defaultValue="@peduarte"
-                  className="col-span-3"
-                /> */}
-              </div>
-            </div>
-            <DialogFooter>
-              <Button type="submit">Save changes</Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
       </Wrapper>
     </div>
   );
