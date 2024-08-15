@@ -14,7 +14,7 @@ function HeroSection() {
         <div className="flex flex-col items-center justify-center py-14 h-full">
           <button className="group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200">
             <span className="z-10 py-2.5 text-sm text-neutral-100 flex items-center justify-center gap-1.5">
-              ⚡️ Cshopper Web3 Multi-Vendor Ecommerce App
+              ⚡️ Web3 Ecommerce App
               <ChevronRight className="w-4 h-4" />
             </span>
           </button>
