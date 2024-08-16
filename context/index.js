@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { config, projectId, metadata } from "@/config";
 import { createWeb3Modal, useWeb3ModalTheme } from "@web3modal/wagmi/react";

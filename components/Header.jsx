@@ -68,6 +68,7 @@ function Header() {
           </Link>
 
           <w3m-button />
+          {/* <w3m-account-button /> */}
           {/* Icon end */}
 
           {/* Mobile icon start */}
