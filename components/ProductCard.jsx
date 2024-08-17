@@ -9,7 +9,7 @@ const ProductCard = ({ data }) => {
       className="transform  overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
     >
       <Image
-        className="rounded-lg"
+        className="rounded-lg max-h-[23rem] object-cover "
         width={500}
         height={500}
         src={data?.mainimage}

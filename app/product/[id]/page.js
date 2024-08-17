@@ -75,62 +75,62 @@ export default function ProductDetails({ params }) {
                 <div
                   className={`border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer`}
                 >
-                  UK 6
+                  XXSmall
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer`}
                 >
-                  UK 6
+                  XSmall
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer`}
                 >
-                  UK 6
+                  Small
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer`}
                 >
-                  UK 6
+                  Medium
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer`}
                 >
-                  UK 6
+                  Large
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer`}
                 >
-                  UK 6
+                  XLarge
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer`}
                 >
-                  UK 6
+                  XXLarge
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer`}
                 >
-                  UK 6
+                  XXXLarge
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium hover:border-black cursor-pointer`}
                 >
-                  UK 6
+                  Plus Size
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium cursor-not-allowed hover:border-black/[0.1] opacity-50`}
                 >
-                  UK 6
+                  Plus Size +
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium cursor-not-allowed hover:border-black/[0.1] opacity-50`}
                 >
-                  UK 6
+                  Plus Size ++
                 </div>
                 <div
                   className={`border rounded-md text-center py-3 font-medium cursor-not-allowed hover:border-black/[0.1] opacity-50`}
                 >
-                  UK 6
+                  Plus Size +++
                 </div>
               </div>
             </div>
